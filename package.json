@@ -1,0 +1,13 @@
+{
+  "name": "chicken-tikka-masala",
+  "version": "1.0.0",
+  "description": "alexa helps you make Chicken Tikka Masala!",
+  "main": "index.js",
+  "author": "om sharma",
+  "license": "ISC",
+  "dependencies": {
+    "alexa-app": "^2.3.2",
+    "dynasty": "^0.2.4",
+    "lodash": "^4.3.0"
+  }
+}
