@@ -1,0 +1,32 @@
+{
+  "intents": [
+    {
+      "intent": "saveChickenTikkaMasalaIntent",
+      "slots": []
+    },
+    {
+      "intent": "loadChickenTikkaMasalaIntent",
+      "slots": []
+    },
+    {
+      "intent": "advanceStepIntent",
+      "slots": []
+    },
+    {
+      "intent": "ChickenTikkaMasalaIntent",
+      "slots": []
+    },
+    {
+      "intent": "AMAZON.HelpIntent",
+      "slots": []
+    },
+    {
+      "intent": "AMAZON.CancelIntent",
+      "slots": []
+    },
+    {
+      "intent": "AMAZON.StopIntent",
+      "slots": []
+    }
+  ]
+}
