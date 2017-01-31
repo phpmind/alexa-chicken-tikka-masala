@@ -1,4 +1,4 @@
-'Chicken tikka masala' skill allows users to prepare 'Chicken tikka masala'.
+**'Chicken tikka masala'** skill allows users to prepare 'Chicken tikka masala'.
 
 It is a dish of marinated roasted chunks of chicken tikka in a spicy sauce. 
 It is worldwide famous dish and one of the UK and america's most popular dish.
