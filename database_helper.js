@@ -3,16 +3,18 @@ module.change_code = 1;
 var _ = require('lodash');
 var CTM_DATA_TABLE_NAME = 'ChickenTikkaMasalaData';
 
+
 var credentials = {
-    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
-    region: 'eu-west-1'
+    accessKeyId: ChickenTikkaMasala_AWS_ACCESS_KEY_ID,
+    secretAccessKey: ChickenTikkaMasala_AWS_SECRET_ACCESS_KEY
+    region: 'us-east-1'
 };
 
- var dynasty = require('dynasty')({region:'us-east-1'});
-
-/////////////////////////////////////
+  var dynasty = require('dynasty')({credentials});
+ 
 /*
+/////////////////////////////////////  region:'us-east-1'
+
 var localUrl = 'http://localhost:4000';
 var localCredentials = {
   region: 'us-east-1',
@@ -27,8 +29,7 @@ var dynasty = localDynasty;
 
 
 
-var localDynasty = require('dynasty')(localCredentials, localUrl);
-var dynasty = localDynasty;
+
 
 function ChickenTikkaMasalaHelper() {}
 var ChickenTikkaMasalaTable = function() {
@@ -44,6 +45,7 @@ ChickenTikkaMasalaHelper.prototype.createChickenTikkaMasalaTable = function() {
         }
       });
     });
+
 };
 
 ChickenTikkaMasalaHelper.prototype.storeChickenTikkaMasalaData = function(userId, ChickenTikkaMasalaData) {
@@ -52,6 +54,8 @@ ChickenTikkaMasalaHelper.prototype.storeChickenTikkaMasalaData = function(userId
     data: ChickenTikkaMasalaData
   }).catch(function(error) {
     console.log(error);
+     console.log("===storeChickenTikkaMasalaData======================================================");
+
   });
 };
 

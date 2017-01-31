@@ -44,6 +44,7 @@ skillService.intent('saveChickenTikkaMasalaIntent', {
     'utterances': ['{save} {|a|the|my} {chicken tikka masala | tikka masala | chicken masala | chicken |  masala | tikka}']
   },
   function(request, response) {
+    console.log("saveChickenTikkaMasalaIntent");
     var chickenTikkaMasalaHelper = getChickenTikkaMasalaHelperFromRequest(request);
     saveChickenTikkaMasala(chickenTikkaMasalaHelper, request);
     response.say('Your Chicken Tikka Masala progress has been saved!');
@@ -58,7 +59,7 @@ skillService.intent('loadChickenTikkaMasalaIntent', {
     'utterances': ['{load|resume} {|a|the} {|last} {chicken tikka masala | tikka masala | chicken masala | chicken |  masala | tikka}']
   },
   function(request, response) {
-    var userId = request.userId;
+    var userId = request['data']['session']['user']['userId']; //request.userId;
     databaseHelper.readChickenTikkaMasalaData(userId).then(function(result) {
       return (result === undefined ? {} : JSON.parse(result['data']));
     }).then(function(loadedChickenTikkaMasalaData) {
@@ -102,9 +103,15 @@ skillService.intent('ChickenTikkaMasalaIntent', {
 );
 
 
-var saveChickenTikkaMasala = function(cakeBakerHelper, request) {
-  var userId = request.userId;
-  databaseHelper.storeCakeBakerData(userId, JSON.stringify(cakeBakerHelper))
+var saveChickenTikkaMasala = function(ChickenTikkaMasalaHelper, request) {
+  var userId = request['data']['session']['user']['userId'];  //request.userId;
+
+  console.log("--------------"+request['data']['session']['user']['userId']);
+
+  console.log("________________________________"+ JSON.stringify(ChickenTikkaMasalaHelper));
+
+
+  databaseHelper.storeChickenTikkaMasalaData(userId, JSON.stringify(ChickenTikkaMasalaHelper))
     .then(function(result) {
       return result;
     }).catch(function(error) {
