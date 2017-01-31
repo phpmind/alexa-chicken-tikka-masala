@@ -17,4 +17,4 @@ Instructions to use this skill below:
 
 - If you remember the step number, You can go to that particular step too. Just say something like, Go to, step 7.
 
-Please reach out to me at omcdac1@yahoo.co.uk if you have any suggestions or developments in this recipe or if you want me to prepare skills like these for other dishes.
+Please reach out to me at tastyfoodapp@gmail.com if you have any suggestions or developments in this recipe or if you want me to prepare skills like these for other dishes.
